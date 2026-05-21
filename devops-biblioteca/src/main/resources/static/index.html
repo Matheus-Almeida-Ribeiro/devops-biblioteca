@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DevOps Biblioteca API</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins', sans-serif;
+      background:#0f172a;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    .background{
+      position:fixed;
+      width:100%;
+      height:100%;
+      background:
+      radial-gradient(circle at top left, #2563eb 0%, transparent 30%),
+      radial-gradient(circle at bottom right, #7c3aed 0%, transparent 30%);
+      z-index:-1;
+    }
+
+    header{
+      padding:40px 10%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:700;
+      color:#60a5fa;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:25px;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#60a5fa;
+    }
+
+    .hero{
+      min-height:80vh;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 10%;
+      gap:40px;
+      flex-wrap:wrap;
+    }
+
+    .hero-text{
+      flex:1;
+      min-width:300px;
+    }
+
+    .hero-text h1{
+      font-size:60px;
+      line-height:1.1;
+      margin-bottom:20px;
+    }
+
+    .hero-text h1 span{
+      color:#60a5fa;
+    }
+
+    .hero-text p{
+      color:#cbd5e1;
+      margin-bottom:30px;
+      font-size:18px;
+      max-width:600px;
+    }
+
+    .buttons{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:14px 28px;
+      border:none;
+      border-radius:12px;
+      font-size:16px;
+      cursor:pointer;
+      text-decoration:none;
+      transition:0.3s;
+      font-weight:600;
+    }
+
+    .btn-primary{
+      background:#2563eb;
+      color:white;
+    }
+
+    .btn-primary:hover{
+      background:#1d4ed8;
+      transform:translateY(-2px);
+    }
+
+    .btn-secondary{
+      background:transparent;
+      border:2px solid #60a5fa;
+      color:#60a5fa;
+    }
+
+    .btn-secondary:hover{
+      background:#60a5fa;
+      color:#0f172a;
+    }
+
+    .card{
+      flex:1;
+      min-width:320px;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.1);
+      backdrop-filter:blur(12px);
+      border-radius:24px;
+      padding:30px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .code{
+      background:#020617;
+      padding:20px;
+      border-radius:16px;
+      overflow:auto;
+      margin-top:20px;
+      font-size:14px;
+      color:#38bdf8;
+    }
+
+    .features{
+      padding:100px 10%;
+    }
+
+    .features h2{
+      text-align:center;
+      margin-bottom:50px;
+      font-size:42px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+      gap:30px;
+    }
+
+    .feature-box{
+      background:rgba(255,255,255,0.05);
+      padding:30px;
+      border-radius:20px;
+      transition:0.3s;
+      border:1px solid rgba(255,255,255,0.1);
+    }
+
+    .feature-box:hover{
+      transform:translateY(-5px);
+      border-color:#60a5fa;
+    }
+
+    .feature-box h3{
+      margin-bottom:15px;
+      color:#60a5fa;
+    }
+
+    footer{
+      text-align:center;
+      padding:40px;
+      color:#94a3b8;
+    }
+
+    @media(max-width:900px){
+
+      .hero-text h1{
+        font-size:42px;
+      }
+
+      .hero{
+        padding-top:50px;
+      }
+
+      header{
+        flex-direction:column;
+        gap:20px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<header>
+  <div class="logo">📚 DevOps Biblioteca</div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#features">Tecnologias</a>
+    <a href="http://4.204.8.70:8080/swagger-ui/index.html" target="_blank">Swagger</a>
+  </nav>
+</header>
+
+<section class="hero">
+
+  <div class="hero-text">
+    <h1>
+      API de Biblioteca com
+      <span>Spring Boot + Docker</span>
+    </h1>
+
+    <p>
+      Projeto desenvolvido utilizando Java 17, Oracle XE,
+      Docker e Spring Boot para gerenciamento de livros
+      e integração via API REST.
+    </p>
+
+    <div class="buttons">
+      <a href="http://4.204.8.70:8080/swagger-ui/index.html" class="btn btn-primary">
+        Abrir Swagger
+      </a>
+
+      <a href="#features" class="btn btn-secondary">
+        Ver Tecnologias
+      </a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🚀 Executar Projeto</h2>
+
+    <div class="code">
+sudo docker compose up --build
+    </div>
+
+    <h2 style="margin-top:25px;">🐳 Containers</h2>
+
+    <div class="code">
+oracle-db
+spring-app
+    </div>
+
+    <h2 style="margin-top:25px;">📖 Swagger</h2>
+
+    <div class="code">
+http://4.204.8.70:8080/swagger-ui/index.html
+    </div>
+  </div>
+
+</section>
+
+<section class="features" id="features">
+
+  <h2>⚡ Tecnologias</h2>
+
+  <div class="grid">
+
+    <div class="feature-box">
+      <h3>☕ Java 17</h3>
+      <p>
+        Backend moderno utilizando Java 17 com Spring Boot.
+      </p>
+    </div>
+
+    <div class="feature-box">
+      <h3>🌱 Spring Boot</h3>
+      <p>
+        API REST rápida, escalável e organizada.
+      </p>
+    </div>
+
+    <div class="feature-box">
+      <h3>🐳 Docker</h3>
+      <p>
+        Containers isolados para aplicação e banco de dados.
+      </p>
+    </div>
+
+    <div class="feature-box">
+      <h3>🗄️ Oracle XE</h3>
+      <p>
+        Banco Oracle executando via Docker Compose.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  Desenvolvido por Matheus Almeida 🚀
+</footer>
+
+</body>
+</html>
