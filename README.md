@@ -98,7 +98,7 @@ Esse comando irá:
 Após subir os containers, acesse:
 
 ```bash
-http://localhost:8080/
+http://localhost:8080/ ou http://4.204.8.70:8080
 ```
 
 ---
