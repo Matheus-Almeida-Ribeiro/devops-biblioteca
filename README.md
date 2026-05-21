@@ -171,5 +171,3 @@ O projeto utiliza:
 
 Matheus Almeida
 
-```
-```
