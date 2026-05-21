@@ -74,9 +74,7 @@ cd devops-biblioteca/devops-biblioteca
 ```bash
 sudo docker compose up --build
 ```
-## Executar sem Docker
-
-Caso queira executar a aplicação em Docker:
+apos subir os cotainers rode:
 ```bash
 ./mvnw spring-boot:run
 ````
