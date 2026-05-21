@@ -64,7 +64,7 @@ git clone https://github.com/Matheus-Almeida-Ribeiro/devops-biblioteca.git
 ## 2. Entrar na pasta do projeto
 
 ```bash
-cd devops-biblioteca
+cd devops-biblioteca/devops-biblioteca
 ```
 
 ---
